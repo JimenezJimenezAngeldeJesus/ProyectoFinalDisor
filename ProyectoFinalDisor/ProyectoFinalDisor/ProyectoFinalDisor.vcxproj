@@ -90,6 +90,7 @@
     <ClCompile Include="NumeroFibonacci.cpp" />
     <ClCompile Include="NumeroPadovan.cpp" />
     <ClCompile Include="NumeroUlam.cpp" />
+    <ClCompile Include="Operaciones.cpp" />
     <ClCompile Include="ProyectoFinalDisor.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -104,6 +105,7 @@
     <ClInclude Include="NumerodelaSuerte.h" />
     <ClInclude Include="NumeroPadovan.h" />
     <ClInclude Include="NumeroUlam.h" />
+    <ClInclude Include="Operaciones.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>

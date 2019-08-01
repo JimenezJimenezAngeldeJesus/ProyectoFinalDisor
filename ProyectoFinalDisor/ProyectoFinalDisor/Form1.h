@@ -65,6 +65,16 @@ namespace ProyectoFinalDisor {
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Button^  button5;
+	private: System::Windows::Forms::Label^  numeroFeliz;
+	private: System::Windows::Forms::Label^  capicua;
+	private: System::Windows::Forms::Label^  decimalLabel;
+	private: System::Windows::Forms::Label^  binarioLabel;
+	private: System::Windows::Forms::Label^  hexadecimalLabel;
+	private: System::Windows::Forms::Label^  nombreLabel;
+	private: System::Windows::Forms::TextBox^  textBox5;
+	private: System::Windows::Forms::TextBox^  textBox6;
+	private: System::Windows::Forms::TextBox^  textBox7;
+	private: System::Windows::Forms::TextBox^  textBox8;
 
 	private:
 		/// <summary>
@@ -92,6 +102,16 @@ namespace ProyectoFinalDisor {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->numeroFeliz = (gcnew System::Windows::Forms::Label());
+			this->capicua = (gcnew System::Windows::Forms::Label());
+			this->decimalLabel = (gcnew System::Windows::Forms::Label());
+			this->binarioLabel = (gcnew System::Windows::Forms::Label());
+			this->hexadecimalLabel = (gcnew System::Windows::Forms::Label());
+			this->nombreLabel = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -112,6 +132,7 @@ namespace ProyectoFinalDisor {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"siguiente";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
 			// textBox1
 			// 
@@ -206,11 +227,103 @@ namespace ProyectoFinalDisor {
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &Form1::button5_Click);
 			// 
+			// numeroFeliz
+			// 
+			this->numeroFeliz->AutoSize = true;
+			this->numeroFeliz->Location = System::Drawing::Point(155, 284);
+			this->numeroFeliz->Name = L"numeroFeliz";
+			this->numeroFeliz->Size = System::Drawing::Size(93, 13);
+			this->numeroFeliz->TabIndex = 14;
+			this->numeroFeliz->Text = L"Es un numero feliz";
+			// 
+			// capicua
+			// 
+			this->capicua->AutoSize = true;
+			this->capicua->Location = System::Drawing::Point(145, 316);
+			this->capicua->Name = L"capicua";
+			this->capicua->Size = System::Drawing::Size(113, 13);
+			this->capicua->TabIndex = 15;
+			this->capicua->Text = L"Es un numero capicua";
+			// 
+			// decimalLabel
+			// 
+			this->decimalLabel->AutoSize = true;
+			this->decimalLabel->Location = System::Drawing::Point(68, 364);
+			this->decimalLabel->Name = L"decimalLabel";
+			this->decimalLabel->Size = System::Drawing::Size(48, 13);
+			this->decimalLabel->TabIndex = 16;
+			this->decimalLabel->Text = L"Decimal:";
+			// 
+			// binarioLabel
+			// 
+			this->binarioLabel->AutoSize = true;
+			this->binarioLabel->Location = System::Drawing::Point(68, 393);
+			this->binarioLabel->Name = L"binarioLabel";
+			this->binarioLabel->Size = System::Drawing::Size(45, 13);
+			this->binarioLabel->TabIndex = 17;
+			this->binarioLabel->Text = L"Binario: ";
+			// 
+			// hexadecimalLabel
+			// 
+			this->hexadecimalLabel->AutoSize = true;
+			this->hexadecimalLabel->Location = System::Drawing::Point(68, 420);
+			this->hexadecimalLabel->Name = L"hexadecimalLabel";
+			this->hexadecimalLabel->Size = System::Drawing::Size(71, 13);
+			this->hexadecimalLabel->TabIndex = 18;
+			this->hexadecimalLabel->Text = L"Hexadecimal:";
+			// 
+			// nombreLabel
+			// 
+			this->nombreLabel->AutoSize = true;
+			this->nombreLabel->Location = System::Drawing::Point(71, 448);
+			this->nombreLabel->Name = L"nombreLabel";
+			this->nombreLabel->Size = System::Drawing::Size(50, 13);
+			this->nombreLabel->TabIndex = 19;
+			this->nombreLabel->Text = L"Nombre: ";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(158, 365);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(206, 20);
+			this->textBox5->TabIndex = 20;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(157, 391);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(207, 20);
+			this->textBox6->TabIndex = 21;
+			// 
+			// textBox7
+			// 
+			this->textBox7->Location = System::Drawing::Point(157, 417);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(207, 20);
+			this->textBox7->TabIndex = 22;
+			// 
+			// textBox8
+			// 
+			this->textBox8->Location = System::Drawing::Point(158, 448);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(206, 20);
+			this->textBox8->TabIndex = 23;
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(407, 551);
+			this->Controls->Add(this->textBox8);
+			this->Controls->Add(this->textBox7);
+			this->Controls->Add(this->textBox6);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->nombreLabel);
+			this->Controls->Add(this->hexadecimalLabel);
+			this->Controls->Add(this->binarioLabel);
+			this->Controls->Add(this->decimalLabel);
+			this->Controls->Add(this->capicua);
+			this->Controls->Add(this->numeroFeliz);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
@@ -237,6 +350,7 @@ namespace ProyectoFinalDisor {
 				}
 				nf.siguiente();
 				this->textBox1->Text = "" + nf.getValor();
+				this->textBox5->Text = "" + nf.getValor();
 			 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(nf.getValor() < 0){
@@ -244,6 +358,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 				}
 				np.siguiente();
 				this->textBox3->Text = "" + np.getValor();
+				this->textBox5->Text = "" + np.getValor();
 
 		 }
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {	
@@ -256,6 +371,12 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 				this->textBox1->Text = "" + nf.getValor();
 		 }
 
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+
+
+
+
+		 }
 };
 }
 
